@@ -4,4 +4,4 @@
 cd ../deployment/docker
 
 # Build Docker image
-docker build -t file-upload-api .
+docker build -t eTalente-jnr-java-dev .

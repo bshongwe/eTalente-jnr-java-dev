@@ -5,7 +5,7 @@ FROM openjdk:11-jre-slim
 WORKDIR /app
 
 # Copies packaged JAR file into container
-COPY target/file-upload-api-1.0.0.jar /app/app.jar
+COPY target/eTalente-jnr-java-dev-1.0.0.jar /app/app.jar
 
 # Exposes port application runs on
 EXPOSE 8080
