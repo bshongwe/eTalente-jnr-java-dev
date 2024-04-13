@@ -1,7 +1,7 @@
 #!/bin/bash
 
-# Navigate to the deployment/docker directory
+# Navigate to deployment/docker directory
 cd ../deployment/docker
 
-# Build the Docker image
+# Build Docker image
 docker build -t file-upload-api .
