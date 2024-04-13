@@ -1,2 +1,2 @@
 # eTalente-jnr-java-dev
-Interview Assessment
+eTalente Interview Assessment
