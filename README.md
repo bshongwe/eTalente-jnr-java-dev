@@ -69,3 +69,8 @@ The application handles errors gracefully and returns meaningful error messages 
 
 API requests, responses, and errors are logged for monitoring and troubleshooting purposes.
 
+# Implemetations
+-   <strong>File Upload Endpoint:</strong> <i>We have implemented a POST endpoint /api/upload to accept file uploads.</i>
+-   <strong>Error Handling:</strong> <i>We have implemented a global exception handler to handle exceptions gracefully, with a specific handler for handling file size limit exceeded exceptions.</i>
+-   <strong>Logging:</strong> <i>We have configured logging to capture API requests, responses, and errors for monitoring and troubleshooting purposes.</i>
+-   <strong>Testing:</strong> <i>We have added unit tests to ensure the functionality of the controller class.</i>
