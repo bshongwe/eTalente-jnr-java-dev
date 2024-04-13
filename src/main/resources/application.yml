@@ -3,3 +3,7 @@ logging:
     root: INFO
     com.example: DEBUG
 
+spring:
+  security:
+    enabled: false
+
