@@ -74,3 +74,4 @@ API requests, responses, and errors are logged for monitoring and troubleshootin
 -   <strong>Error Handling:</strong> <i>We have implemented a global exception handler to handle exceptions gracefully, with a specific handler for handling file size limit exceeded exceptions.</i>
 -   <strong>Logging:</strong> <i>We have configured logging to capture API requests, responses, and errors for monitoring and troubleshooting purposes.</i>
 -   <strong>Testing:</strong> <i>We have added unit tests to ensure the functionality of the controller class.</i>
+-   <strong>API Prep for Deployment:</strong> <i>authentication, file size validation, API documentation</i>
