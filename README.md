@@ -5,14 +5,24 @@ eTalente Interview Assessment
 
 # File Upload API
 
-This is a Spring Boot application that provides a RESTful API for uploading files.
+This is a Spring Boot application that provides a RESTful API for uploading files. The API allows clients to securely upload files, with added features such as basic authentication, file size validation, and Docker deployment.
+
+## Features
+-   **RESTful API:** <i>Provides endpoints for file upload operations.</i>
+-   **Basic Authentication:** <i>Secures the API with basic authentication using Spring Security.</i>
+-   **File Size Validation:** <i>Validates uploaded file size to ensure it does not exceed a specified limit.</i>
+-   **Docker Deployment:** <i>Includes Docker support for containerized deployment.</i>
+-   **AWS Deployment:** <i>Ready for deployment to AWS Elastic Beanstalk.</i>
 
 ## Usage
 
 ### Prerequisites
 
-- Java Development Kit (JDK) 11 or higher
-- Maven
+-   Java Development Kit (JDK) 11 or higher
+-   Maven
+-   For deployment:
+    -   Docker
+    -   AWS CLI
 
 ### Running the Application
 
@@ -25,7 +35,7 @@ This is a Spring Boot application that provides a RESTful API for uploading file
 2. Navigate to the project directory:
 
    ```bash
-   cd file-upload-api
+   cd eTalente-jnr-java-dev
    ```
 
 3. Build the application using Maven:
@@ -37,7 +47,7 @@ This is a Spring Boot application that provides a RESTful API for uploading file
 4. Run the application:
 
    ```bash
-   java -jar target/file-upload-api-1.0.0.jar
+   java -jar target/eTalente-jnr-java-dev-1.0.0.jar
    ```
 
    Alternatively, you can run it using Maven:
@@ -45,6 +55,7 @@ This is a Spring Boot application that provides a RESTful API for uploading file
    ```bash
    mvn spring-boot:run
    ```
+
 
 ### Uploading a File
 
@@ -75,3 +86,53 @@ API requests, responses, and errors are logged for monitoring and troubleshootin
 -   <strong>Logging:</strong> <i>We have configured logging to capture API requests, responses, and errors for monitoring and troubleshooting purposes.</i>
 -   <strong>Testing:</strong> <i>We have added unit tests to ensure the functionality of the controller class.</i>
 -   <strong>API Prep for Deployment:</strong> <i>authentication, file size validation, API documentation</i>
+
+# Deployment
+
+   ```bash
+   mvn spring-boot:run
+   ```
+
+#### Docker Deployment
+
+1. Build the Docker image:
+
+   ```bash
+   cd deployment/docker
+   ./build.sh
+   ```
+
+2. Run the Docker container:
+
+   ```bash
+   ./run.sh
+   ```
+
+#### AWS Deployment
+
+1. Ensure you have configured AWS CLI with appropriate credentials.
+
+2. Run the deployment script:
+
+   ```bash
+   cd deployment/aws
+   ./deploy.sh
+   ```
+
+### API Documentation
+
+The API documentation can be accessed using Swagger UI. Once the application is running, navigate to `http://localhost:8080/swagger-ui.html` in your web browser to view the API documentation.
+
+### Error Handling
+
+The application handles errors gracefully and returns meaningful error messages for invalid requests, file processing errors, and other exceptional conditions.
+
+### Logging
+
+API requests, responses, and errors are logged for monitoring and troubleshooting purposes.
+
+## Contributing
+
+Contributions are welcome! If you have any suggestions or find any issues, please feel free to open an issue or submit a pull request.
+
+
